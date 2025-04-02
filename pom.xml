@@ -106,7 +106,7 @@
                     </descriptorRefs>
                     <archive>
                         <manifest>
-                            <mainClass>net.core.ui.MainActivity</mainClass>
+                            <mainClass>core.ui.MainActivity</mainClass>
                         </manifest>
                     </archive>
                 </configuration>
