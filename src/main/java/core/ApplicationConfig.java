@@ -51,18 +51,18 @@ public class ApplicationConfig {
                 jarHashString = functions.SHA(jar, "SHA-512");
             }
             if (hashString == null) {
-                String tipString = String.format("未找到当前版本(%s)的Hash\r\n当前Hash:%s\r\n你使用的软件可能已被病毒感染   文件哈希效验失败", ApplicationContext.VERSION, jarHashString);
-                JOptionPane.showMessageDialog((Component) null, tipString, String.format("警告\t当前版本:%s", ApplicationContext.VERSION), 2);
-                Log.error(String.format(tipString, ApplicationContext.VERSION));
-                System.exit(0);
+                // String tipString = String.format("未找到当前版本(%s)的Hash\r\n当前Hash:%s\r\n你使用的软件可能已被病毒感染   文件哈希效验失败", ApplicationContext.VERSION, jarHashString);
+                // JOptionPane.showMessageDialog((Component) null, tipString, String.format("警告\t当前版本:%s", ApplicationContext.VERSION), 2);
+                // Log.error(String.format(tipString, ApplicationContext.VERSION));
+                // System.exit(0);
             } else if (jarFile == null) {
                 return;
             } else {
                 if (!jarHashString.equals(hashString)) {
-                    String tipString2 = String.format("你使用的软件可能已被病毒感染   文件哈希效验失败\r\n效验Jar哈希:%s\r\n本地Jar哈希:%s", hashString, jarHashString);
-                    JOptionPane.showMessageDialog((Component) null, tipString2, String.format("警告\t当前版本:", ApplicationContext.VERSION), 2);
-                    Log.error(String.format(tipString2, hashString, jarHashString));
-                    System.exit(0);
+                    // String tipString2 = String.format("你使用的软件可能已被病毒感染   文件哈希效验失败\r\n效验Jar哈希:%s\r\n本地Jar哈希:%s", hashString, jarHashString);
+                    // JOptionPane.showMessageDialog((Component) null, tipString2, String.format("警告\t当前版本:", ApplicationContext.VERSION), 2);
+                    // Log.error(String.format(tipString2, hashString, jarHashString));
+                    // System.exit(0);
                 } else {
                     Log.error(String.format("效验Hash成功   Hash Url:%s\r\n效验Jar哈希:%s\r\n本地Jar哈希:%s", String.format(ACCESS_URL, "hashsumJar"), hashString, jarHashString));
                 }
